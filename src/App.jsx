@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Todo List</h1>
+      <h1>What's he Plan For Today?</h1>
       <TodoForm />
       <TodoStatusFilter />
       <TodoList />
