@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 function TodoItem({ todo, onDelete, onToggleStatus, onEdit }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -20,7 +22,8 @@ function TodoItem({ todo, onDelete, onToggleStatus, onEdit }) {
   };
 
   return (
-    <li className='todo-item'>
+    <div className='item-container'>
+      <li className='todo-item'>
       {isEditing ? (
         <>
           <input type="text" value={editText} onChange={handleInputChange} />
@@ -34,11 +37,16 @@ function TodoItem({ todo, onDelete, onToggleStatus, onEdit }) {
           >
             {todo.text}
           </span>
-          <button onClick={handleToggleEdit} className='edit-button'>Edit</button>
-          <button onClick={onDelete} className='delete-button'>Delete</button>
+          <button onClick={handleToggleEdit} className='edit-button'>
+            <FontAwesomeIcon icon={faEdit} />
+          </button>
+          <button onClick={onDelete} className='delete-button'>
+            <FontAwesomeIcon icon={faTrashCan} />
+          </button>
         </>
       )}
     </li>
+    </div>
   );
 }
 

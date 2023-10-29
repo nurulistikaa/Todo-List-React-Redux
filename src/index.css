@@ -29,7 +29,7 @@ h1 {
 
 .todo-input {
   flex-grow: 1;
-  padding: 10px;
+  padding: 11px;
   font-size: 16px;
   border-radius: 5px;
   border: 1px solid gray;
@@ -61,7 +61,7 @@ h1 {
   padding: 10px 16px;
   margin-right: 10px;
   font-size: 14px;
-  background-color: #c2bebe;
+  background-color: #a9a9a9;
   border: none;
   border-radius: 10px;
   color: white;
@@ -76,23 +76,70 @@ h1 {
 }
 
 .todo-list {
+  width: auto;
   display: grid;
   list-style-type: none;
   padding: 0;
   margin-top: 25px;
   margin-bottom: 25px;
   gap: 15px;
+  
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
 }
 
 .todo-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-grow: 1;
-  text-align: left;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 12px;
   font-size: 16px;
   background-color: #f4f4f4;
+  border: 1px solid grey;
   border-radius: 5px;
+  position: relative;
+}
+
+.todo-item:hover {
+  cursor: default;
+}
+
+.todo-item .completed {
+  text-decoration: line-through;
+}
+
+.edit-button,
+.delete-button {
+  width: 30px;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  position: absolute;
+}
+
+.edit-button {
+  right: 48px;
+  background-color: #a9a9a9;
+}
+
+.edit-button:hover {
+  background-color: #009E60;
+}
+
+.delete-button {
+  right: 10px;
+  background-color: #a9a9a9;
+}
+
+.delete-button:hover {
+  background-color: #D22B2B;
 }
