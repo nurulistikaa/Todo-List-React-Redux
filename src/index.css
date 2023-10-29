@@ -60,7 +60,7 @@ h1 {
 .filter-button {
   padding: 10px 16px;
   margin-right: 10px;
-  font-size: 14px;
+  font-size: 15px;
   background-color: #a9a9a9;
   border: none;
   border-radius: 10px;
@@ -97,7 +97,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
-  padding: 12px;
+  padding: 20px;
   font-size: 16px;
   background-color: #f4f4f4;
   border: 1px solid grey;
@@ -142,4 +142,32 @@ h1 {
 
 .delete-button:hover {
   background-color: #D22B2B;
+}
+
+.save-input {
+  padding: 1.5px;
+  font-size: 16px; 
+  background-color: #f4f4f4;
+  border: 2px solid grey; 
+  border-radius: 5px; 
+  margin-right: 10px;
+  width: 100%;
+}
+
+.save-button {
+  margin-right: -8px;
+  width: 75px;
+  padding: 4.5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
 }

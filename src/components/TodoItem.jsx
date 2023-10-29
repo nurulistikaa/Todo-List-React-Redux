@@ -26,7 +26,7 @@ function TodoItem({ todo, onDelete, onToggleStatus, onEdit }) {
       <li className='todo-item'>
       {isEditing ? (
         <>
-          <input type="text" value={editText} onChange={handleInputChange} />
+          <input className='save-input' type="text" value={editText} onChange={handleInputChange} />
           <button onClick={handleSaveEdit} className='save-button'>Save</button>
         </>
       ) : (
